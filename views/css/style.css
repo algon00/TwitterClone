@@ -1,0 +1,194 @@
+/*全体*/
+.side {
+    width: 90px;
+}
+
+.main {
+    max-width: 600px;
+    text-align: left;
+    width: calc(100% - 90px);
+    border-left: 1px solid #eef;
+    border-right: 1px solid #eef;
+}
+
+@madia screen and(max-width:500px){
+    .contaier{
+        padding:0;
+    }
+    .side{
+        width:60px;
+    }
+    .main{
+        width:cacl(100% - 60px);
+    }
+}
+
+.contaier {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    padding: .3rem;
+}
+
+.btn{font-weight: bold;background-color: #1af;color: #fff;font-size: 15px;}
+.btn:hover{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+/*サイド*/
+.side .side-inner {
+    position: sticky;
+    height: 100vh;
+    top: 0px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.side .side-inner img {
+    width: 35%;
+    margin-bottom: 15px;
+}
+
+.side .side-inner img.icon {
+    width: 70%;
+}
+
+.side .side-inner img.post-icon {
+    width: 80%;
+}
+
+.side .side-inner .my-icon {
+    bottom: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.side .side-inner .my-icon img {
+    width: 80%;
+    border-radius: 50%;
+    border: 0.2px solid #aaa;
+}
+
+@media screen and(max-width:500px){
+    .side .side-inner img{
+        width:70%;
+        margin-bottom:15px;
+    }
+    .side .side-inner img.icon{
+        width:85%;
+    }
+    .side .side-inner img.post-icon{
+        width:100%;
+    }
+    .side .side-inner .my-icon img{
+        width:90%;
+    }
+}
+
+/*タイトルエリア*/
+.main .main-header{
+    padding: 20px;
+    border-bottom: 1px solid #eef;
+}
+.main .main-header h1{
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+/*ホーム*/
+.main .tweet-post{
+    padding: 10px;
+    display: flex;
+}
+.main .tweet-post .my-icon{
+    width: 80px;
+    padding: 5px 15px 10px 10px;
+}
+.main .tweet-post .my-icon img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+}
+.main .tweet-post .input-area{
+    width: calc(100% - 80px);
+    flex-grow: 1;
+}
+.main .tweet-post .input-area textarea{
+    border: none;
+    height: 100px;
+    width: 100%;
+    resize: none;
+}
+.main .tweet-post .input-area textarea:focus{
+    outline: none;
+}
+.main .tweet-post .input-area .bottom-area{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eef;
+    padding-top: 8px;
+}
+.main .ditch{
+    height: 15px;
+    background-color: #f7f8f8;
+    border-top: #eef;
+    border-bottom: #eef;
+}
+
+.main .tweet-list .tweet{
+    border-bottom: 1px solid #eef;
+    padding: 10px;
+    display: flex;
+}
+.main .tweet-list .tweet .user{
+    width: 80px;
+    padding: 5px 10px 15px 15px;
+}
+.main .tweet-list .tweet .user img{
+    width: 100%;
+    border-radius: 50%;
+    border: 0.2px solid #eef;
+}
+.main .tweet-list .tweet .name{
+    padding-top: 5px;
+}
+.main .tweet-list .tweet .name a{}
+.main .tweet-list .tweet .name a .nickname{
+    color: #122;
+    font-size: 17px;
+    font-weight: bold;
+}
+.main .tweet-list .tweet .name a .user-name{
+    color: #444;
+    font-size: 14px;
+}
+.main .tweet-list .tweet .content{width: calc(100% - 80px);}
+.main .tweet-list .tweet .content p{
+    font-size: 16px;
+    padding: 8px 0 0 0;
+    margin-bottom: 8px;
+}
+.main .tweet-list .tweet .content .image-post{
+    margin-right: 5px;width: 100%;border-radius: 15px;margin-bottom: 10px;border: 1px solid #eef;
+}
+.main .tweet-list .tweet .content .icon-list{
+    display: flex;
+}
+.main .tweet-list .tweet .content .icon-list .like img{
+    width: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.main .tweet-list .tweet .content .icon-list .like-count{
+    width: 25px;
+    padding-top: 2px;
+    color: #444;
+}
