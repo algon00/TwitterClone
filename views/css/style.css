@@ -11,7 +11,7 @@
     border-right: 1px solid #eef;
 }
 
-@madia screen and(max-width:500px){
+@media screen and(max-width:500px){
     .contaier{
         padding:0;
     }
@@ -160,7 +160,9 @@ a{
 .main .tweet-list .tweet .name{
     padding-top: 5px;
 }
-.main .tweet-list .tweet .name a{}
+.main .tweet-list .tweet .name a{
+    color: #122;
+}
 .main .tweet-list .tweet .name a .nickname{
     color: #122;
     font-size: 17px;
