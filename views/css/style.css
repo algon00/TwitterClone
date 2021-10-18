@@ -11,15 +11,17 @@
     border-right: 1px solid #eef;
 }
 
-@media screen and(max-width:500px){
-    .contaier{
+@media screen and(max-width: 500px) {
+    .contaier {
         padding:0;
     }
-    .side{
-        width:60px;
+
+    .side {
+        width: 60px;
     }
-    .main{
-        width:cacl(100% - 60px);
+
+    .main {
+        width: cacl(100% - 60px);
     }
 }
 
@@ -32,18 +34,31 @@
     padding: .3rem;
 }
 
-.btn{font-weight: bold;background-color: #1af;color: #fff;font-size: 15px;}
-.btn:hover{
+.btn {
+    font-weight: bold;
+    background-color: #1af;
+    color: #fff;
+    font-size: 15px;
+}
+
+.btn:hover {
     color: #fff;
 }
-.btn-reverse{border: 1px solid #1af;background-color: #fff;color: #1af;}
-.btn-reverse:hover{
+
+.btn-reverse {
+    border: 1px solid #1af;
+    background-color: #fff;
     color: #1af;
 }
 
-a{
+.btn-reverse:hover {
+    color: #1af;
+}
+
+a {
     text-decoration: none;
 }
+
 /*サイド*/
 .side .side-inner {
     position: sticky;
@@ -78,28 +93,32 @@ a{
     border: 0.2px solid #aaa;
 }
 
-@media screen and(max-width:500px){
-    .side .side-inner img{
+@media screen and(max-width: 500px) {
+    .side .side-inner img {
         width:70%;
-        margin-bottom:15px;
+        margin-bottom: 15px;
     }
-    .side .side-inner img.icon{
-        width:85%;
+
+    .side .side-inner img.icon {
+        width: 85%;
     }
-    .side .side-inner img.post-icon{
-        width:100%;
+
+    .side .side-inner img.post-icon {
+        width: 100%;
     }
-    .side .side-inner .my-icon img{
-        width:90%;
+
+    .side .side-inner .my-icon img {
+        width: 90%;
     }
 }
 
 /*タイトルエリア*/
-.main .main-header{
+.main .main-header {
     padding: 20px;
     border-bottom: 1px solid #eef;
 }
-.main .main-header h1{
+
+.main .main-header h1 {
     font-weight: bold;
     line-height: 20px;
     font-size: 20px;
@@ -107,172 +126,249 @@ a{
 }
 
 /*ホーム*/
-.main .tweet-post{
+.main .tweet-post {
     padding: 10px;
     display: flex;
 }
-.main .tweet-post .my-icon{
+
+.main .tweet-post .my-icon {
     width: 80px;
     padding: 5px 15px 10px 10px;
 }
-.main .tweet-post .my-icon img{
+
+.main .tweet-post .my-icon img {
     width: 100%;
     border-radius: 50%;
     border: 1px solid #aaa;
 }
-.main .tweet-post .input-area{
+
+.main .tweet-post .input-area {
     width: calc(100% - 80px);
     flex-grow: 1;
 }
-.main .tweet-post .input-area textarea{
+
+.main .tweet-post .input-area textarea {
     border: none;
     height: 100px;
     width: 100%;
     resize: none;
 }
-.main .tweet-post .input-area textarea:focus{
+
+.main .tweet-post .input-area textarea:focus {
     outline: none;
 }
-.main .tweet-post .input-area .bottom-area{
+
+.main .tweet-post .input-area .bottom-area {
     flex-wrap: wrap;
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #eef;
     padding-top: 8px;
 }
-.main .ditch{
+
+.main .ditch {
     height: 15px;
     background-color: #f7f8f8;
     border-top: #eef;
     border-bottom: #eef;
 }
 
-.main .tweet-list .tweet{
+.main .tweet-list .tweet {
     border-bottom: 1px solid #eef;
     padding: 10px;
     display: flex;
 }
-.main .tweet-list .tweet .user{
+
+.main .tweet-list .tweet .user {
     width: 80px;
     padding: 5px 10px 15px 15px;
 }
-.main .tweet-list .tweet .user img{
+
+.main .tweet-list .tweet .user img {
     width: 100%;
     border-radius: 50%;
     border: 0.2px solid #eef;
 }
-.main .tweet-list .tweet .name{
+
+.main .tweet-list .tweet .name {
     padding-top: 5px;
 }
-.main .tweet-list .tweet .name a{
+
+.main .tweet-list .tweet .name a {
     color: #122;
 }
-.main .tweet-list .tweet .name a .nickname{
+
+.main .tweet-list .tweet .name a .nickname {
     color: #122;
     font-size: 17px;
     font-weight: bold;
 }
-.main .tweet-list .tweet .name a .user-name{
+
+.main .tweet-list .tweet .name a .user-name {
     color: #444;
     font-size: 14px;
 }
-.main .tweet-list .tweet .content{width: calc(100% - 80px);}
-.main .tweet-list .tweet .content p{
+
+.main .tweet-list .tweet .content {
+    width: calc(100% - 80px);
+}
+
+.main .tweet-list .tweet .content p {
     font-size: 16px;
     padding: 8px 0 0 0;
     margin-bottom: 8px;
 }
-.main .tweet-list .tweet .content .image-post{
-    margin-right: 5px;width: 100%;border-radius: 15px;margin-bottom: 10px;border: 1px solid #eef;
+
+.main .tweet-list .tweet .content .image-post {
+    margin-right: 5px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #eef;
 }
-.main .tweet-list .tweet .content .icon-list{
+
+.main .tweet-list .tweet .content .icon-list {
     display: flex;
 }
-.main .tweet-list .tweet .content .icon-list .like img{
+
+.main .tweet-list .tweet .content .icon-list .like img {
     width: 25px;
     margin-right: 10px;
     cursor: pointer;
 }
-.main .tweet-list .tweet .content .icon-list .like-count{
+
+.main .tweet-list .tweet .content .icon-list .like-count {
     width: 25px;
     padding-top: 2px;
     color: #444;
 }
 
 /*会員登録画面(ログイン画面共有)*/
-body .signup{
+body .signup {
     display: flex;
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
     height: 100%;
 }
-.signup{
+
+.signup {
     background-color: #123;
     color: #fff;
 }
-.signup .form-signup{
+
+.signup .form-signup {
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: auto;
 }
-.signup .logo-white{
+
+.signup .logo-white {
     margin-bottom: 30px;
     width: 50px;
 }
-.signup h1{
+
+.signup h1 {
     font-size: 20px;
     margin-bottom: 20px;
 }
-.signup input{
-   margin-bottom: 10px;
-   background-color: #123;
-   border-color: #456;
-   color: #fff;
+
+.signup input {
+    margin-bottom: 10px;
+    background-color: #123;
+    border-color: #456;
+    color: #fff;
 }
-.signup input:focus{
+
+.signup input:focus {
     background-color: #123;
     border-color: #456;
     color: #fff;
 }
 
 /*ユーザー*/
-.main .profile-area{
+.main .profile-area {
     padding: 25px;
 }
-.main .profile-area .top{
+
+.main .profile-area .top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.main .profile-area .top .user{
+
+.main .profile-area .top .user {
     width: 30%;
     padding: 5px 15px 10px 0;
 }
-.main .profile-area .top .user img{
+
+.main .profile-area .top .user img {
     width: 100%;
     border-radius: 50%;
 }
-.main .profile-area .top button{
+
+.main .profile-area .top button {
     margin-bottom: 20px;
 }
-.main .profile-area .name{
+
+.main .profile-area .name {
     font-size: 18px;
     font-weight: bold;
 }
-.main .profile-area .follow-follower{
+
+.main .profile-area .follow-follower {
     display: flex;
     padding: 15px 0 10px 0;
 }
-.main .profile-area .follow-follower .follow-count{
+
+.main .profile-area .follow-follower .follow-count {
     width: 30px;
     font-size: 16px;
     font-weight: bold;
 }
-.main .profile-area .follow-follower .follow-text{
+
+.main .profile-area .follow-follower .follow-text {
     color: #778;
     font-size: 16px;
     width: 100px;
     margin-right: 30px;
+}
+
+/*検索*/
+.main .search-area {
+    display: flex;
+    padding: 15px;
+}
+
+.main .search-area input {
+    width: 70%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+/*通知*/
+.main .notification-list .no-result{
+    padding: 20px;
+}
+.main .notification-list .notification-item{
+    padding: 10px;
+    border-bottom: 1px solid rgb(235, 238, 240);
+}
+.main .notification-list .notification-item .user{
+    width: 70px;
+    padding: 5px 15px 10px 10px;
+}
+.main .notification-list .notification-item .user img{
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgb(235, 238, 240);
+}
+.main .notification-list .notification-item .content{
+    width: 100%;
+}
+.main .notification-list .notification-item .content p{
+    font-size: 16px;
+    padding: 8px 0 0 0;
+    margin-bottom: 8px;
 }
