@@ -7,7 +7,7 @@ include_once('../util.php');
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('./common/head.php'); ?>
+    <?php include_once('../views/common/head.php'); ?>
     <title>ログイン画面 / titterクローン</title>
     <meta name="discription" content="会員登録画面です">
 </head>
@@ -23,6 +23,6 @@ include_once('../util.php');
             <p class="mt-2 mb-3">&copy; 2021</p>
         </form>
     </main>
-    <?php include_once('./common/foot.php'); ?>
+    <?php include_once('../views/common/foot.php'); ?>
 </body>
 </html>
