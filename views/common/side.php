@@ -7,7 +7,7 @@
             <li class="nav-item"><a href="notification.php" class="nav-link"><img src="<?php echo HOME_URL; ?>img/icon-notification.svg" alt=""></a></li>
             <li class="nav-item"><a href="profile.php" class="nav-link"><img src="<?php echo HOME_URL; ?>img/icon-profile.svg" alt=""></a></li>
             <li class="nav-item"><a href="post.php" class="nav-link"><img src="<?php echo HOME_URL; ?>img/icon-post-tweet-twitterblue.svg" alt="" class="post-icon"></a></li>
-            <li class="nav-item my-icon"><a class="nav-link"><img src="<?php echo HOME_URL; ?>img/img_uploaded/user/sample-person.jpg" alt="" class="js-popover" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="<a href='profile.php'>プロフィール</a><br><a href='sign-out.php'>ログアウト</a>"></a></li>
+            <li class="nav-item my-icon"><a class="nav-link"><img src="<?php echo htmlspecialchars($view_user['image_path']) ;?>" alt="" class="js-popover" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-html="true" data-bs-content="<a href='profile.php'>プロフィール</a><br><a href='sign-out.php'>ログアウト</a>"></a></li>
         </ul>
     </div>
 </div>

@@ -46,4 +46,63 @@ function convertToDayTimeAgo(string $datetime){
  
     return (int)$time . $unit;
 }
+
+/**
+ * ユーザー情報をセッションに保存
+ * @param array $user
+ * @return void
+ */
+function saveUsersession(array $user){
+    //セッションを開始していない場合
+    if(session_status() === PHP_SESSION_NONE){
+        //セッション開始
+        session_start();
+    }
+
+    $_SESSION['USER'] = $user;
+}
+
+/**
+ * ユーザー情報をセッションから削除
+ * @param array $user
+ * @return void
+ */
+function deleteUsersession(){
+    //セッションを開始していない場合
+    if(session_status() === PHP_SESSION_NONE){
+        //セッション開始
+        session_start();
+    }
+
+    unset($_SESSION['USER']);
+}
+
+/**
+ * セッションのユーザー情報を取得
+ * 
+ * @return array|false
+ */
+
+ function getUserSession(){
+     //セッションを開始していない場合
+    if(session_status() === PHP_SESSION_NONE){
+        //セッション開始
+        session_start();
+    }
+
+    if(!isset($_SESSION['USER'])){
+        // セッションにユーザー情報がない場合
+        return false;
+    }
+
+    $user = $_SESSION['USER'];
+
+    // 画像のファイル名からファイルのURLを取得
+    if(!isset($user['image_name'])){
+        $user['image_name'] = null;
+    }
+    $user['image_path'] = buildImagepath($user['image_name'], 'user');
+
+    return $user;
+ }
 ?>

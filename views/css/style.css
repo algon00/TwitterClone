@@ -59,6 +59,10 @@ a {
     text-decoration: none;
 }
 
+.alert-sm{
+    font-size: 0.6rem;
+}
+
 /*サイド*/
 .side .side-inner {
     position: sticky;
