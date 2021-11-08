@@ -16,7 +16,7 @@
             <img src="<?php echo buildImagepath($view_tweets['tweet_image_name'],'tweet'); ?>" alt="" class="image-post"> 
         <?php endif; ?>
         <div class="icon-list">
-            <div class="like js-like" data-like-id = "<?php echo htmlspecialchars($view_tweets['like_id'])?>">
+            <div class="like js-like" data-tweet-id="<?php echo htmlspecialchars($view_tweets['tweet_id']); ?>" data-like-id = "<?php echo htmlspecialchars($view_tweets['like_id']); ?>">
                 <?php 
                     if(isset($view_tweets['like_id'])){
                         echo '<img src="'.HOME_URL.'img/icon-heart-twitterblue.svg" alt="">';

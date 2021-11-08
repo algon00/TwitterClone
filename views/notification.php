@@ -28,7 +28,7 @@ include_once('../util.php');
                 <?php else : ?>
                     <div class="notification-item">
                         <div class="user">
-                            <img src="<?php echo HOME_URL; ?>img/img_uploaded/user/sample-person.jpg" alt="">
+                            <img src="<?php echo HOME_URL; ?>img_uploaded/user/sample-person.jpg" alt="">
                         </div>
                         <div class="coment">
                             <p>いいねされました。</p>
@@ -36,7 +36,7 @@ include_once('../util.php');
                     </div>
                     <div class="notification-item">
                         <div class="user">
-                            <img src="<?php echo HOME_URL; ?>img/img_uploaded/user/sample-person.jpg" alt="">
+                            <img src="<?php echo HOME_URL; ?>img_uploaded/user/sample-person.jpg" alt="">
                         </div>
                         <div class="content">
                             <p>フォローされました。</p>

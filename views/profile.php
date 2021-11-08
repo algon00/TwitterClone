@@ -34,7 +34,7 @@ $view_tweets = [
             </div>
             <div class="profile-area">
             <div class="top">
-                <div class="user"><img src="<?php echo HOME_URL;?>img/img_uploaded/user/sample-person.jpg" alt=""></div>
+                <div class="user"><img src="<?php echo HOME_URL;?>img_uploaded/user/sample-person.jpg" alt=""></div>
                 <?php if (isset($_GET['user_id'])) : ?>
                         <!-- 相手のページ -->
                         <?php if (isset($_GET['case'])) : ?>
@@ -57,7 +57,7 @@ $view_tweets = [
                                     </div>
                                     <div class="modal-body">
                                         <div class="user">
-                                            <img src="<?php echo HOME_URL; ?>img/img_uploaded/user/sample-person.jpg" alt="">
+                                            <img src="<?php echo HOME_URL; ?>img_uploaded/user/sample-person.jpg" alt="">
                                         </div>
                                         <div class="mb-3">
                                             <label for="" class="mb-1">プロフィール写真</label>

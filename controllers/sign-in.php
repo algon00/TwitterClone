@@ -15,7 +15,6 @@ $try_login_result = null;
 if(isset($_POST['email']) && isset($_POST['password'])){
     //ログインチェック実行
     $user = findUserAndCheckPassword($_POST['email'], $_POST['password']);
-    var_dump($user);
     //ログインに成功した場合
     if($user){
         //ユーザー情報をセッションに保存
@@ -33,7 +32,6 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 
 //表示用の変数
 $view_try_login_result = $try_login_result;
-var_dump($view_try_login_result);
 
 //画面表示
 include_once('../views/sign-in.php');
