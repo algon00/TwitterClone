@@ -1,11 +1,18 @@
 <?php
-// ツイートデータの処理
-
-function createtweet(array $data)
+///////////////////////////////////////
+// ツイートデータを処理
+///////////////////////////////////////
+ 
+/**
+ * ツイート作成
+ *
+ * @param array $data
+ * @return bool
+ */
+function createTweet(array $data)
 {
     // DB接続
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
- 
     // 接続エラーがある場合->処理停止
     if ($mysqli->connect_errno) {
         echo 'MySQLの接続に失敗しました。：' . $mysqli->connect_error . "\n";
@@ -15,16 +22,14 @@ function createtweet(array $data)
     // 新規登録のSQLクエリを作成
     $query = 'INSERT INTO tweets (user_id, body, image_name) VALUES (?, ?, ?)';
  
-    // プリペアドステートメントに、作成したクエリを登録
+    // プリペアドステートメントにクエリを登録
     $statement = $mysqli->prepare($query);
  
-    // クエリのプレースホルダ（?の部分）にカラム値を紐付け(i:int s:string)
+    // プレースホルダにカラム値を紐付け（i=int, s=string）
     $statement->bind_param('iss', $data['user_id'], $data['body'], $data['image_name']);
  
     // クエリを実行
     $response = $statement->execute();
- 
-    // 実行に失敗した場合->エラー表示
     if ($response === false) {
         echo 'エラーメッセージ：' . $mysqli->error . "\n";
     }
@@ -35,27 +40,28 @@ function createtweet(array $data)
  
     return $response;
 }
-
+ 
 /**
  * ツイート一覧を取得
- * 
- * @param array $user
+ *
+ * @param array $user ログインしているユーザー情報
+ * @param string $keyword 検索キーワード
  * @return array|false
  */
-function findTweet(array $user){
+function findTweets(array $user, string $keyword = null)
+{
     // DB接続
     $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
- 
     // 接続エラーがある場合->処理停止
     if ($mysqli->connect_errno) {
         echo 'MySQLの接続に失敗しました。：' . $mysqli->connect_error . "\n";
         exit;
     }
-
-    // ログインユーザーIDを取得
+ 
+    // ログインユーザーIDをエスケープ
     $login_user_id = $mysqli->real_escape_string($user['id']);
-
-    // 検索のSQLを作成
+ 
+    // 検索のSQLクエリを作成
     $query = <<<SQL
         SELECT
             T.id AS tweet_id,
@@ -67,31 +73,45 @@ function findTweet(array $user){
             U.name AS user_name,
             U.nickname AS user_nickname,
             U.image_name AS user_image_name,
-            -- ログインユーザーがいいね！したか(している場合値が入る)
+            -- ログインユーザーがいいね！したか（いいね！している場合、値が入る）
             L.id AS like_id,
             -- いいね！数
-            (SELECT COUNT(*) FROM likes WHERE status ='active' AND tweet_id = T.id) AS like_count
+            (SELECT COUNT(*) FROM likes WHERE status = 'active' AND tweet_id = T.id) AS like_count
         FROM
             tweets AS T
-            -- ユーザーテーブルを紐づける
+            -- ユーザーテーブルをusers.idとtweets.user_idで紐付ける
             JOIN
             users AS U ON U.id = T.user_id AND U.status = 'active'
-            -- いいね！テーブルを紐づける
+            -- いいね！テーブルをlikes.tweet_idとtweets.idで紐付ける
             LEFT JOIN
-            likes AS L ON L.tweet_id = T.id AND L.status = 'active' AND L.user_id = $login_user_id
+            likes AS L ON L.tweet_id = T.id AND L.status = 'active' AND L.user_id = '$login_user_id'
         WHERE
             T.status = 'active'
     SQL;
-
-    // SQLの実行
+ 
+    // 検索キーワードが入力されていた場合
+    if (isset($keyword)) {
+        // エスケープ
+        $keyword = $mysqli->real_escape_string($keyword);
+        // ツイート主のニックネーム・ユーザー名・本文から部分一致検索
+        $query .= ' AND CONCAT(U.nickname, U.name, T.body) LIKE "%' . $keyword . '%"';
+    }
+    // 新しい順に並び替え
+    $query .= ' ORDER BY T.created_at DESC';
+    // 表示件数50件
+    $query .= ' LIMIT 50';
+ 
+    // クエリ実行
     $result = $mysqli->query($query);
-    if($result){
+    if ($result) {
         // データを配列で受け取る
         $response = $result->fetch_all(MYSQLI_ASSOC);
-    }else{
+    } else {
         $response = false;
         echo 'エラーメッセージ：' . $mysqli->error . "\n";
     }
-
+ 
+    $mysqli->close();
+ 
     return $response;
 }

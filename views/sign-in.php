@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <?php include_once('../views/common/head.php'); ?>
-    <title>ログイン画面 / titterクローン</title>
+    <title>ログイン画面 / twitterクローン</title>
     <meta name="discription" content="会員登録画面です">
 </head>
 <body class="signup text-center">

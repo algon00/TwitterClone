@@ -12,7 +12,7 @@
 }
 
 @media screen and(max-width: 500px) {
-    .contaier {
+    .container {
         padding:0;
     }
 
@@ -25,7 +25,7 @@
     }
 }
 
-.contaier {
+.container {
     display: flex;
     justify-content: center;
 }

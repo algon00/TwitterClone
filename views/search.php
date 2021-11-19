@@ -1,20 +1,13 @@
-<?php
-//設定関連を読み込む
-include_once('../config.php');
-//便利な関数を読み込む
-include_once('../util.php');
-
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('./common/head.php'); ?>
-    <title>検索画面 / titterクローン</title>
+    <?php include_once('../views/common/head.php'); ?>
+    <title>検索画面 / twitterクローン</title>
     <meta name="discription" content="検索画面です">
 </head>
-<body　class="home search text-center">
-    <div class="contaier">
-        <?php include_once('./common/side.php'); ?>
+<body class="home search text-center">
+    <div class="container">
+        <?php include_once('../views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">
                 <h1>検索</h1>
@@ -23,7 +16,7 @@ include_once('../util.php');
             <!--検索エリア-->
             <form action="search.php" method="get">
                 <div class="search-area">
-                    <input type="text" class="form-contorol" placeholder="キーワード検索"　name="keyword" value="">
+                    <input type="text" class="form-contorol" placeholder="キーワード検索" name="keyword" value="<?php echo htmlspecialchars($view_keyword); ?>">
                     <button type="submit" class="btn">検索</button>
                 </div>
                 
@@ -35,12 +28,12 @@ include_once('../util.php');
             <?php else :?>
                 <div class="tweet-list">
                     <?php foreach($view_tweets as $view_tweets):?>
-                　　　　 <?php include('./common/tweet.php'); ?>
+                　　　　 <?php include('../views/common/tweet.php'); ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
     </div>
-    <?php include_once('./common/foot.php'); ?>
+    <?php include_once('../views/common/foot.php'); ?>
 </body>
 </html>

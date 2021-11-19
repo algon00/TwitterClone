@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
     <?php include_once('../views/common/head.php'); ?>
-    <title>つぶやく画面 / titterクローン</title>
+    <title>つぶやく画面 / twitterクローン</title>
     <meta name="discription" content="つぶやく画面です">
 </head>
-<body　class="home">
-    <div class="contaier">
+<body>
+    <div class="container">
         <?php include_once('../views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">

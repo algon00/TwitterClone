@@ -1,20 +1,13 @@
-<?php
-//設定関連を読み込む
-include_once('../config.php');
-//便利な関数を読み込む
-include_once('../util.php');
-
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('./common/head.php'); ?>
-    <title>通知画面 / titterクローン</title>
+    <?php include_once('../views/common/head.php'); ?>
+    <title>通知画面 / twitterクローン</title>
     <meta name="discription" content="通知画面です">
 </head>
 <body　class="home text-center">
-    <div class="contaier">
-        <?php include_once('./common/side.php'); ?>
+    <div class="container">
+        <?php include_once('../views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">
                 <h1>通知</h1>
@@ -47,6 +40,6 @@ include_once('../util.php');
 
         </div>
     </div>
-    <?php include_once('./common/foot.php'); ?>
+    <?php include_once('../views/common/foot.php'); ?>
 </body>
 </html>

@@ -1,33 +1,13 @@
-<?php
-//設定関連を読み込む
-include_once('../config.php');
-//便利な関数を読み込む
-include_once('../util.php');
-//ツイート一覧
-$view_tweets = [
-    [
-        'user_id' => 1,
-        'user_name' => 'taro',
-        'user_nickname' => '太郎',
-        'user_image_name' => 'sample-person.jpg',
-        'tweet_body' => '今プログラミングをしています。',
-        'tweet_image_name' => null,
-        'tweet_created_at' => '2021-03-15 14:00:00',
-        'like_id' => null,
-        'like_count' => 0,
-    ],
-];
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('./common/head.php'); ?>
-    <title>プロフィール画面 / titterクローン</title>
+    <?php include_once('../views/common/head.php'); ?>
+    <title>プロフィール画面 / twitterクローン</title>
     <meta name="discription" content=プロフィール画面です">
 </head>
 <body　class="home profile text-center">
-    <div class="contaier">
-        <?php include_once('./common/side.php'); ?>
+    <div class="container">
+        <?php include_once('../views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">
                 <h1>太郎</h1>
@@ -95,7 +75,7 @@ $view_tweets = [
             <?php else :?>
                 <div class="tweet-list">
                     <?php foreach($view_tweets as $view_tweets):?>
-                　　　　 <?php include('./common/tweet.php'); ?>
+                　　　　 <?php include('../views/common/tweet.php'); ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
@@ -106,6 +86,6 @@ $view_tweets = [
             $('.js-popover').popover();
         }, false);
     </script>
-    <?php include_once('./common/foot.php'); ?>
+    <?php include_once('../views/common/foot.php'); ?>
 </body>
 </html>
