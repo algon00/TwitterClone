@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('../views/common/head.php'); ?>
-    <title>通知画面 / twitterクローン</title>
+    <?php include_once('../Views/common/head.php'); ?>
+    <title>通知画面 / Twitterクローン</title>
     <meta name="discription" content="通知画面です">
 </head>
 <body　class="home text-center">
     <div class="container">
-        <?php include_once('../views/common/side.php'); ?>
+        <?php include_once('../Views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">
                 <h1>通知</h1>
@@ -40,6 +40,6 @@
 
         </div>
     </div>
-    <?php include_once('../views/common/foot.php'); ?>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
 </html>

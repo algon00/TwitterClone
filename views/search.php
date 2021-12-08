@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('../views/common/head.php'); ?>
-    <title>検索画面 / twitterクローン</title>
+    <?php include_once('../Views/common/head.php'); ?>
+    <title>検索画面 / Twitterクローン</title>
     <meta name="discription" content="検索画面です">
 </head>
 <body class="home search text-center">
     <div class="container">
-        <?php include_once('../views/common/side.php'); ?>
+        <?php include_once('../Views/common/side.php'); ?>
         <div class="main">
             <div class="main-header">
                 <h1>検索</h1>
@@ -28,12 +28,12 @@
             <?php else :?>
                 <div class="tweet-list">
                     <?php foreach($view_tweets as $view_tweets):?>
-                　　　　 <?php include('../views/common/tweet.php'); ?>
+                　　　　 <?php include('../Views/common/tweet.php'); ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
     </div>
-    <?php include_once('../views/common/foot.php'); ?>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
 </html>

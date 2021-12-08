@@ -32,4 +32,4 @@ $view_keyword = $keyword;
 $view_tweets = findTweets($user, $keyword);
  
 // 画面表示
-include_once '../views/search.php';
+include_once '../Views/search.php';

@@ -8,11 +8,11 @@ include_once('../util.php');
 $user = getUserSession();
 if(!$user){
     // ログインしていない
-    header('Location:/twitterclone/controllers/sign-in.php');
+    header('Location:/twitterclone/Controllers/sign-in.php');
 }
 
 // 表示用の変数
 $view_user = $user;
 
 // 画面表示
-include_once('../views/notification.php');
+include_once('../Views/notification.php');

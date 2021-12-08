@@ -10,6 +10,6 @@ include_once('../util.php');
 deleteUsersession();
 
 // ログイン画面に移動
-header('Location:/twitterclone/controllers/sign-in.php');
+header('Location:/twitterclone/Controllers/sign-in.php');
 exit;
 

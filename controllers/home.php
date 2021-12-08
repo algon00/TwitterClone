@@ -12,7 +12,7 @@ include_once('../Models/tweets.php');
 $user = getUserSession();
 if(!$user){
     // ログインしていない
-    header('Location:/twitterclone/controllers/sign-in.php');
+    header('Location:/twitterclone/Controllers/sign-in.php');
 }
 
 // 表示用の変数
@@ -22,4 +22,4 @@ $view_user = $user;
 $view_tweets = findTweets($user);
 
 // 画面表示
-include_once('../views/home.php');
+include_once('../Views/home.php');

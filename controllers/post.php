@@ -15,7 +15,7 @@ include_once('../Models/tweets.php');
 $user = getUserSession();
 if(!$user){
     // ログインしていない
-    header('Location:/twitterclone/controllers/sign-in.php');
+    header('Location:/twitterclone/Controllers/sign-in.php');
 }
 
 // ツイートがある場合
@@ -34,7 +34,7 @@ if (isset($_POST['body'])) {
     // つぶやき投稿
     if(createtweet($data)){
         // ホーム画面に移行
-        header('Location:/twitterclone/controllers/home.php');
+        header('Location:/twitterclone/Controllers/home.php');
         exit;
     }
 }
@@ -43,4 +43,4 @@ if (isset($_POST['body'])) {
 $view_user = $user;
 
 // 画面表示
-include_once('../views/post.php');
+include_once('../Views/post.php');

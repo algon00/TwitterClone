@@ -21,7 +21,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
         saveUsersession($user);
 
         //ホーム画面へ移動
-        header('Location:/twitterclone/controllers/home.php');
+        header('Location:/twitterclone/Controllers/home.php');
         exit;
     }else{
         //ログインに失敗した場合
@@ -34,4 +34,4 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 $view_try_login_result = $try_login_result;
 
 //画面表示
-include_once('../views/sign-in.php');
+include_once('../Views/sign-in.php');

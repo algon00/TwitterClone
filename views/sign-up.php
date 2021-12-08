@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <?php include_once('../views/common/head.php'); ?>
-    <title>会員登録画面 / titterクローン</title>
+    <?php include_once('../Views/common/head.php'); ?>
+    <title>会員登録画面 / Twitterクローン</title>
     <meta name="discription" content="会員登録画面です">
 </head>
 <body class="signup text-center">
@@ -19,6 +19,6 @@
             <p class="mt-2 mb-3">&copy; 2021</p>
         </form>
     </main>
-    <?php include_once('../views/common/foot.php'); ?>
+    <?php include_once('../Views/common/foot.php'); ?>
 </body>
 </html>
