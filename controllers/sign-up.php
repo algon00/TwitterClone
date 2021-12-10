@@ -20,7 +20,7 @@ if(isset($_POST['nickname']) && isset($_POST['name']) && isset($_POST['email']) 
     //ユーザーを作成し成功したら
     if(createUser($data)){
         //ログイン画面に移動
-        header('Location:/twitterclone/Controllers/sign-in.php');
+        header('Location:/TwitterClone/Controllers/sign-in.php');
         exit;
     }
 }

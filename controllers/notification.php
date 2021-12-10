@@ -8,7 +8,7 @@ include_once('../util.php');
 $user = getUserSession();
 if(!$user){
     // ログインしていない
-    header('Location:/twitterclone/Controllers/sign-in.php');
+    header('Location:/TwitterClone/Controllers/sign-in.php');
 }
 
 // 表示用の変数

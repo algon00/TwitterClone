@@ -21,7 +21,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
         saveUsersession($user);
 
         //ホーム画面へ移動
-        header('Location:/twitterclone/Controllers/home.php');
+        header('Location:/TwitterClone/Controllers/home.php');
         exit;
     }else{
         //ログインに失敗した場合
